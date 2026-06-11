@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Engineering Pack — 50+ Copy-Paste Prompts for Coding, Business & More</title>
+    <meta name="description" content="50+ curated AI prompts for coding, business strategy, writing, automation, crypto & productivity. Copy-paste ready. Works with ChatGPT, Claude & any AI.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: #fafafa; }
+        .hero { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 2.8em; margin-bottom: 16px; line-height: 1.2; }
+        .hero p { font-size: 1.3em; opacity: 0.9; max-width: 650px; margin: 0 auto 32px; }
+        .hero .badge { display: inline-block; background: #6c63ff; padding: 6px 16px; border-radius: 20px; font-size: 0.85em; margin-bottom: 20px; }
+        .cta-btn { display: inline-block; background: #6c63ff; color: white; padding: 18px 48px; border-radius: 12px; font-size: 1.2em; font-weight: 700; text-decoration: none; transition: all 0.3s; border: none; cursor: pointer; }
+        .cta-btn:hover { background: #5a52e0; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(108,99,255,0.4); }
+        .cta-btn.secondary { background: transparent; border: 2px solid #6c63ff; margin-left: 12px; }
+        .cta-btn.secondary:hover { background: rgba(108,99,255,0.15); }
+        .stats { display: flex; justify-content: center; gap: 48px; margin-top: 40px; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat .number { font-size: 2.4em; font-weight: 800; }
+        .stat .label { opacity: 0.7; font-size: 0.9em; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 60px 0; }
+        .section h2 { font-size: 2em; margin-bottom: 12px; }
+        .section .subtitle { color: #666; font-size: 1.1em; margin-bottom: 40px; }
+        .categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .category-card { background: white; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: all 0.3s; border: 1px solid #eee; }
+        .category-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .category-icon { font-size: 2.4em; margin-bottom: 12px; }
+        .category-card h3 { font-size: 1.3em; margin-bottom: 8px; }
+        .category-card p { color: #666; line-height: 1.6; }
+        .category-card .count { display: inline-block; background: #f0efff; color: #6c63ff; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; margin-top: 12px; font-weight: 600; }
+        .features { background: white; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+        .feature { padding: 24px; }
+        .feature .icon { font-size: 2em; margin-bottom: 12px; }
+        .feature h4 { font-size: 1.1em; margin-bottom: 8px; }
+        .feature p { color: #666; line-height: 1.6; font-size: 0.95em; }
+        .preview { background: #1a1a2e; color: white; padding: 60px 0; }
+        .preview-card { background: #2d2b55; border-radius: 16px; padding: 32px; font-family: 'Courier New', monospace; font-size: 0.9em; line-height: 1.8; overflow-x: auto; max-width: 700px; margin: 0 auto; }
+        .preview-card .comment { color: #6c63ff; }
+        .preview-card .prompt { color: #e0e0e0; }
+        .preview-card .placeholder { color: #ffd166; }
+        .pricing { text-align: center; }
+        .price-card { background: white; border-radius: 20px; padding: 48px; max-width: 440px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 2px solid #6c63ff; }
+        .price-card .price { font-size: 3.5em; font-weight: 800; }
+        .price-card .price .currency { font-size: 0.4em; vertical-align: top; }
+        .price-card .includes { margin: 24px 0; text-align: left; }
+        .price-card .includes li { padding: 8px 0; list-style: none; }
+        .price-card .includes li::before { content: "✓ "; color: #6c63ff; font-weight: bold; }
+        .faq { background: #f5f5f7; }
+        .faq-item { background: white; border-radius: 12px; margin-bottom: 12px; padding: 20px 24px; cursor: pointer; }
+        .faq-item h4 { display: flex; justify-content: space-between; align-items: center; }
+        .faq-item h4::after { content: "+"; font-size: 1.4em; color: #6c63ff; }
+        .faq-item p { display: none; margin-top: 12px; color: #666; line-height: 1.7; }
+        .faq-item.open p { display: block; }
+        .faq-item.open h4::after { content: "−"; }
+        footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
+        footer p { opacity: 0.7; font-size: 0.9em; }
+        .guarantee { display: inline-flex; align-items: center; gap: 8px; background: #f0fdf4; color: #166534; padding: 12px 24px; border-radius: 12px; margin: 24px auto; font-weight: 600; }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .stats { gap: 24px; }
+            .stat .number { font-size: 1.8em; }
+            .cta-btn { display: block; width: 100%; margin-bottom: 12px; }
+            .cta-btn.secondary { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="badge">🔥 New Release — 2026 Edition</div>
+        <h1>AI Prompt Engineering Pack</h1>
+        <p>50+ curated, copy-paste ready prompts for coding, business, writing, AI automation, crypto & productivity. Stop guessing. Start producing.</p>
+        <a href="#buy" class="cta-btn">Get the Pack — $17</a>
+        <a href="#preview" class="cta-btn secondary">See Preview</a>
+        <div class="stats">
+            <div class="stat"><div class="number">50+</div><div class="label">Curated Prompts</div></div>
+            <div class="stat"><div class="number">6</div><div class="label">Categories</div></div>
+            <div class="stat"><div class="number">3</div><div class="label">File Formats</div></div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2>What's Inside</h2>
+        <p class="subtitle">Every prompt is battle-tested, copy-paste ready, and works with ChatGPT, Claude, Gemini & any AI.</p>
+        <div class="categories">
+            <div class="category-card">
+                <div class="category-icon">💻</div>
+                <h3>Coding & Development</h3>
+                <p>Full-stack generators, bug hunters, security audits, test suites, DevOps pipelines & more.</p>
+                <span class="count">10 prompts</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">📊</div>
+                <h3>Business & Strategy</h3>
+                <p>Business models, market research, pitch decks, content calendars, financial projections & more.</p>
+                <span class="count">8 prompts</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">✍️</div>
+                <h3>Writing & Content</h3>
+                <p>SEO blog posts, sales pages, newsletters, LinkedIn branding, social media captions & more.</p>
+                <span class="count">6 prompts</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🤖</div>
+                <h3>AI & Automation</h3>
+                <p>Workflow automators, prompt chains, chatbot personas, data analysis & more.</p>
+                <span class="count">4 prompts</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">⚡</div>
+                <h3>Productivity & Life</h3>
+                <p>Weekly planners, learning accelerators, decision frameworks, remote work systems & more.</p>
+                <span class="count">4 prompts</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🔗</div>
+                <h3>Crypto & Web3</h3>
+                <p>DeFi yield analysis, smart contract audits, tokenomics design, portfolio optimization & more.</p>
+                <span class="count">4 prompts</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="features section container">
+        <h2>Why This Pack?</h2>
+        <p class="subtitle">Not another generic prompt list. These are structured, specific, and produce real results.</p>
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="icon">📋</div>
+                <h4>Copy-Paste Ready</h4>
+                <p>Just replace [BRACKETS] with your details. No prompt engineering knowledge needed.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🎯</div>
+                <h4>Difficulty Levels</h4>
+                <p>Each prompt rated 🟢 Beginner, 🟡 Intermediate, or 🔴 Advanced so you know what to expect.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🔄</div>
+                <h4>Reusable Templates</h4>
+                <p>Use the same prompt framework over and over for different projects and clients.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">📦</div>
+                <h4>3 Formats Included</h4>
+                <p>Markdown guide, JSON data file, and PDF. Use however you prefer.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🧙</div>
+                <h4>Bonus: Meta Prompts</h4>
+                <p>Prompt Improver & System Prompt Generator — make any prompt 10x better.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🧰</div>
+                <h4>Bonus: 5 Frameworks</h4>
+                <p>STAR, 5 Whys, SWOT, Eisenhower Matrix, First Principles — think like a pro.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="preview" id="preview">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:32px;">Prompt Preview</h2>
+            <div class="preview-card">
+                <p class="comment">// Full-Stack App Generator (1 of 50+ prompts)</p>
+                <p class="prompt">You are a senior full-stack developer. Build a complete <span class="placeholder">[APP_TYPE]</span> application with:</p>
+                <p class="prompt">- Frontend: <span class="placeholder">[FRAMEWORK]</span> with responsive design</p>
+                <p class="prompt">- Backend: <span class="placeholder">[BACKEND]</span> with REST API</p>
+                <p class="prompt">- Database: <span class="placeholder">[DATABASE]</span> with proper schema</p>
+                <p class="prompt">- Authentication: JWT with refresh tokens</p>
+                <p class="prompt">- Error handling, validation, and logging</p>
+                <p class="prompt">- Docker setup for deployment</p>
+                <p class="prompt">- Unit tests with >80% coverage</p>
+                <p class="prompt"></p>
+                <p class="prompt">Provide the complete project structure, all source files, and deployment instructions. Follow clean architecture principles and SOLID design patterns.</p>
+                <p style="margin-top:24px; text-align:center; color:#6c63ff; font-size:1.1em;">👆 Just replace [BRACKETS] and paste into ChatGPT, Claude, or any AI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pricing container" id="buy">
+        <h2 style="text-align:center;">Get Instant Access</h2>
+        <p class="subtitle" style="text-align:center;">One-time payment. Lifetime updates. No subscription.</p>
+        <div class="price-card">
+            <div class="price"><span class="currency">$</span>17</div>
+            <p style="color:#666; margin-top:-8px;">One-time payment • Lifetime access</p>
+            <ul class="includes">
+                <li>50+ curated AI prompts</li>
+                <li>6 categories: Coding, Business, Writing, AI, Productivity, Crypto</li>
+                <li>Markdown guide + JSON data file</li>
+                <li>5 bonus framework prompts (STAR, 5 Whys, SWOT, etc.)</li>
+                <li>2 bonus meta prompts (Prompt Improver, System Prompt Generator)</li>
+                <li>Difficulty levels for each prompt</li>
+                <li>Tags for easy search & filter</li>
+                <li>Free lifetime updates</li>
+            </ul>
+            <a href="#" class="cta-btn" style="width:100%; text-align:center;">Buy Now — $17</a>
+            <div class="guarantee">🔒 30-day money-back guarantee</div>
+        </div>
+    </section>
+
+    <section class="section faq container">
+        <h2 style="text-align:center;">FAQ</h2>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <h4>Which AI tools do these prompts work with?</h4>
+            <p>ChatGPT, Claude, Gemini, Mistral, Llama — any AI assistant. The prompts are model-agnostic and produce great results across all platforms.</p>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <h4>Do I need prompt engineering experience?</h4>
+            <p>Nope! Every prompt is copy-paste ready. Just replace the [BRACKETS] with your specific details and hit send. Difficulty levels (🟢🟡🔴) help you pick the right one for your skill level.</p>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <h4>What file formats are included?</h4>
+            <p>Markdown (.md) for reading and reference, JSON (.json) for programmatic use, and PDF for offline reading. All three are included.</p>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <h4>Is there a refund policy?</h4>
+            <p>Yes! 30-day money-back guarantee. If the pack doesn't save you at least 10 hours, we'll refund you in full.</p>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('open')">
+            <h4>Will I get updates?</h4>
+            <p>Yes, lifetime updates included. As we add new prompts and improve existing ones, you'll get access to every update for free.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AI Prompt Engineering Pack by Ahmad Fardan</p>
+            <p style="margin-top:8px;">Built with 💜 for makers, developers & entrepreneurs</p>
+        </div>
+    </footer>
+</body>
+</html>

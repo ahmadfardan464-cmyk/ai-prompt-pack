@@ -1,0 +1,380 @@
+{
+  "product": "AI Prompt Engineering Pack",
+  "version": "1.0",
+  "author": "Ahmad Fardan",
+  "categories": [
+    {
+      "id": "coding",
+      "name": "💻 Coding & Development",
+      "icon": "💻",
+      "prompts": [
+        {
+          "id": "code-001",
+          "title": "Full-Stack App Generator",
+          "description": "Generate a complete full-stack application with best practices",
+          "prompt": "You are a senior full-stack developer. Build a complete [APP_TYPE] application with:\n- Frontend: [FRAMEWORK] with responsive design\n- Backend: [BACKEND_FRAMEWORK] with REST API\n- Database: [DATABASE] with proper schema\n- Authentication: JWT with refresh tokens\n- Error handling, validation, and logging\n- Docker setup for deployment\n- Unit tests with >80% coverage\n\nProvide the complete project structure, all source files, and deployment instructions. Follow clean architecture principles and SOLID design patterns.",
+          "tags": ["fullstack", "webdev", "api", "architecture"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "code-002",
+          "title": "Bug Hunter & Fixer",
+          "description": "Analyze code for bugs and provide fixes",
+          "prompt": "You are an expert debug agent. Analyze the following code for bugs, security vulnerabilities, performance issues, and code smells:\n\n```\n[PASTE CODE HERE]\n```\n\nFor each issue found:\n1. Category (bug/security/performance/code-smell)\n2. Severity (critical/high/medium/low)\n3. Explanation of the issue\n4. Fixed code snippet\n5. Prevention tips\n\nAlso suggest refactoring opportunities to improve maintainability.",
+          "tags": ["debugging", "security", "code-review"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "code-003",
+          "title": "API Documentation Writer",
+          "description": "Generate comprehensive API documentation",
+          "prompt": "You are a technical writer specializing in API documentation. Create comprehensive documentation for the following API endpoints:\n\n[PASTE ENDPOINTS/SPEC HERE]\n\nInclude:\n1. Overview and authentication guide\n2. Each endpoint with: method, URL, headers, request body, response examples (success + error)\n3. Rate limiting info\n4. SDK examples in Python, JavaScript, and cURL\n5. Changelog format\n6. OpenAPI 3.0 spec\n\nWrite in clear, developer-friendly language. Use consistent formatting throughout.",
+          "tags": ["documentation", "api", "technical-writing"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "code-004",
+          "title": "Database Schema Designer",
+          "description": "Design optimized database schemas",
+          "prompt": "You are a database architect. Design an optimized database schema for [PROJECT_DESCRIPTION] with the following requirements:\n- [REQUIREMENT_1]\n- [REQUIREMENT_2]\n- [REQUIREMENT_N]\n\nProvide:\n1. ERD (Entity Relationship Diagram) in Mermaid.js format\n2. Complete SQL CREATE TABLE statements with proper constraints, indexes, and foreign keys\n3. Migration scripts (up + down) for [FRAMEWORK]\n4. Seed data script with realistic sample data\n5. Query optimization notes for the most common operations\n6. Estimated table sizes and partitioning strategy if needed\n\nOptimize for: read-heavy workload, ACID compliance, and future scalability.",
+          "tags": ["database", "sql", "architecture", "schema"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "code-005",
+          "title": "Code Refactor Pro",
+          "description": "Refactor messy code into clean, maintainable code",
+          "prompt": "You are a code refactoring specialist. Take the following code and refactor it following best practices:\n\n```\n[PASTE CODE HERE]\n```\n\nApply these principles:\n1. SOLID design principles\n2. DRY (Don't Repeat Yourself)\n3. Meaningful naming conventions\n4. Proper error handling\n5. Type safety (add TypeScript types if JS)\n6. Extract reusable utilities\n7. Add JSDoc/docstrings\n8. Reduce cognitive complexity\n\nShow the before/after comparison and explain each refactoring decision. Ensure the refactored code maintains the same functionality while being more maintainable and testable.",
+          "tags": ["refactoring", "clean-code", "best-practices"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "code-006",
+          "title": "Test Suite Generator",
+          "description": "Generate comprehensive test suites",
+          "prompt": "You are a QA engineer specializing in test automation. Generate a comprehensive test suite for the following code:\n\n```\n[PASTE CODE HERE]\n```\n\nCreate tests using [TESTING_FRAMEWORK] that cover:\n1. Unit tests for all functions/methods (happy path + edge cases)\n2. Integration tests for API endpoints\n3. Error handling tests (invalid inputs, network failures, timeouts)\n4. Boundary value analysis\n5. Security tests (SQL injection, XSS, CSRF)\n6. Performance benchmarks\n\nFollow AAA pattern (Arrange, Act, Assert). Use descriptive test names. Aim for >90% code coverage. Include setup/teardown helpers and mock factories.",
+          "tags": ["testing", "qa", "automation"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "code-007",
+          "title": "DevOps Pipeline Builder",
+          "description": "Create CI/CD pipelines and infrastructure configs",
+          "prompt": "You are a DevOps engineer. Create a complete CI/CD pipeline and infrastructure setup for [PROJECT_TYPE] using [CLOUD_PROVIDER]:\n\n1. CI/CD Pipeline (GitHub Actions / GitLab CI)\n   - Build stage with caching\n   - Test stage with parallel jobs\n   - Security scanning (SAST + dependency check)\n   - Deploy to staging/production\n   - Rollback strategy\n\n2. Infrastructure as Code (Terraform)\n   - VPC, subnets, security groups\n   - Compute (containers/VMs)\n   - Database with replication\n   - CDN and load balancer\n\n3. Monitoring & Alerting (Prometheus + Grafana)\n4. Secrets management\n5. Cost estimation\n\nInclude all config files and README with setup instructions.",
+          "tags": ["devops", "cicd", "infrastructure", "cloud"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "code-008",
+          "title": "Security Audit Checklist",
+          "description": "Comprehensive security review for any codebase",
+          "prompt": "You are a cybersecurity auditor. Perform a thorough security audit of the following codebase/config:\n\n```\n[PASTE CODE/CONFIG HERE]\n```\n\nCheck against OWASP Top 10 and CWE Top 25:\n1. Injection vulnerabilities (SQL, NoSQL, Command, LDAP)\n2. Broken Authentication & Session Management\n3. Sensitive Data Exposure\n4. XML External Entities (XXE)\n5. Broken Access Control\n6. Security Misconfiguration\n7. Cross-Site Scripting (XSS)\n8. Insecure Deserialization\n9. Using Components with Known Vulnerabilities\n10. Insufficient Logging & Monitoring\n\nFor each finding: severity, description, proof of concept, remediation, and reference links.\n\nProvide a risk score (1-10) and prioritized fix list.",
+          "tags": ["security", "audit", "owasp", "vulnerability"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "code-009",
+          "title": "Regex Master Builder",
+          "description": "Build and explain complex regex patterns",
+          "prompt": "You are a regex expert. Create a regular expression pattern for [MATCH_DESCRIPTION] with these requirements:\n- Must match: [EXAMPLES_OF_VALID]\n- Must NOT match: [EXAMPLES_OF_INVALID]\n- Edge cases: [EDGE_CASES]\n\nProvide:\n1. The regex pattern (with flags if needed)\n2. Step-by-step explanation of each part\n3. Visual breakdown (regex101 style)\n4. Test cases (10 valid + 10 invalid)\n5. Performance considerations (catastrophic backtracking check)\n6. Optimized version if applicable\n7. Implementation in Python, JavaScript, and Go\n8. Common pitfalls to avoid",
+          "tags": ["regex", "pattern-matching", "validation"],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "code-010",
+          "title": "TypeScript Type Wizard",
+          "description": "Convert JavaScript to TypeScript with proper types",
+          "prompt": "You are a TypeScript expert. Convert the following JavaScript code to TypeScript with maximum type safety:\n\n```javascript\n[PASTE JS CODE HERE]\n```\n\nApply:\n1. Strict type annotations for all variables, parameters, and returns\n2. Generic types where appropriate\n3. Discriminated unions for state management\n4. Utility types (Partial, Required, Pick, Omit) where useful\n5. Type guards and type narrowing\n6. Interface definitions for all data structures\n7. Enum types for constants\n8. Branded types for domain primitives\n9. Proper module declarations\n10. tsconfig.json with strict mode\n\nExplain each type decision. Ensure zero `any` types. Add JSDoc comments for public APIs.",
+          "tags": ["typescript", "type-safety", "javascript"],
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "name": "📊 Business & Strategy",
+      "icon": "📊",
+      "prompts": [
+        {
+          "id": "biz-001",
+          "title": "Business Model Canvas Generator",
+          "description": "Create a complete business model canvas",
+          "prompt": "You are a business strategist. Create a comprehensive Business Model Canvas for [BUSINESS_IDEA]:\n\n1. Customer Segments: Define target customers with demographics, psychographics, and behavior patterns\n2. Value Propositions: What unique value does this business deliver? What problems does it solve?\n3. Channels: How will customers discover and access the product/service?\n4. Customer Relationships: How will you acquire, retain, and grow customers?\n5. Revenue Streams: Pricing model, payment methods, revenue projections for Year 1-3\n6. Key Resources: What assets are essential? (physical, intellectual, human, financial)\n7. Key Activities: What must the business do well to succeed?\n8. Key Partnerships: Strategic alliances, suppliers, partners needed\n9. Cost Structure: Fixed and variable costs, break-even analysis\n\nAlso include: SWOT analysis, competitive landscape, and 3 key metrics to track. Be specific with numbers and timelines.",
+          "tags": ["business-model", "strategy", "startup"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "biz-002",
+          "title": "Market Research Analyst",
+          "description": "Deep market analysis for any niche",
+          "prompt": "You are a market research analyst. Conduct a thorough market analysis for [PRODUCT/SERVICE] in the [NICHE/INDUSTRY] space:\n\n1. Market Size & Growth: TAM, SAM, SOM with sources\n2. Target Audience: Detailed persona with demographics, pain points, buying behavior\n3. Competitive Analysis: Top 5 competitors with pricing, features, market share, strengths/weaknesses\n4. Market Trends: Current trends, emerging opportunities, potential threats\n5. Pricing Strategy: Recommended pricing with justification and competitor comparison\n6. Distribution Channels: Online/offline, direct/indirect, recommended mix\n7. Entry Barriers: Regulatory, technical, capital requirements\n8. Go-to-Market Strategy: 90-day launch plan with specific actions\n9. Risk Assessment: Top 5 risks with mitigation strategies\n\nUse real market data where possible. Include charts/tables format for easy reading.",
+          "tags": ["market-research", "analysis", "startup"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "biz-003",
+          "title": "Startup Pitch Deck Writer",
+          "description": "Create investor-ready pitch deck content",
+          "prompt": "You are a pitch deck consultant who has helped startups raise $50M+. Create a compelling 12-slide pitch deck for [STARTUP_DESCRIPTION]:\n\nSlide 1: Company name + tagline (memorable, specific)\nSlide 2: Problem (paint the pain with data and stories)\nSlide 3: Solution (clear, simple explanation)\nSlide 4: Market Opportunity (TAM/SAM/SOM with credible sources)\nSlide 5: Business Model (how you make money, unit economics)\nSlide 6: Traction (metrics, growth rate, key milestones)\nSlide 7: Product Demo (key features, screenshots description)\nSlide 8: Competitive Landscape (positioning matrix, unfair advantage)\nSlide 9: Go-to-Market Strategy (channels, CAC, LTV)\nSlide 10: Team (why THIS team is uniquely qualified)\nSlide 11: Financial Projections (3-year forecast, key assumptions)\nSlide 12: The Ask (how much, what for, what milestone it achieves)\n\nFor each slide: title, bullet points, suggested visuals, and speaker notes. Make it story-driven, not data-dumped.",
+          "tags": ["pitch-deck", "fundraising", "startup"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "biz-004",
+          "title": "Content Marketing Machine",
+          "description": "Generate 30 days of content for any niche",
+          "prompt": "You are a content marketing strategist. Create a 30-day content calendar for [BUSINESS/BRAND] in the [NICHE] space:\n\nFor each day, provide:\n1. Content type (carousel/reel/article/poll/thread)\n2. Hook/headline (scroll-stopping)\n3. Key message (1 sentence)\n4. CTA (engagement/conversion/awareness)\n5. Best time to post (with timezone)\n6. Suggested hashtags (5-7)\n\nContent mix: 40% educational, 25% entertaining, 20% social proof, 15% promotional\nPlatform focus: LinkedIn (B2B) or Instagram (B2C)\n\nAlso include:\n- 5 viral-worthy hook formulas\n- 3 repurposing strategies (1 piece → 5 formats)\n- Engagement boosters (poll questions, controversy topics)\n- SEO keywords to target\n- KPIs to track\n\nMake it specific to [NICHE], not generic. Every piece should move the audience closer to [GOAL].",
+          "tags": ["content", "marketing", "social-media"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "biz-005",
+          "title": "Financial Projection Builder",
+          "description": "Create detailed financial projections",
+          "prompt": "You are a financial analyst. Create a detailed 3-year financial projection for [BUSINESS_TYPE] with these assumptions:\n- Starting capital: [AMOUNT]\n- Monthly operating costs: [AMOUNT]\n- Pricing: [PRICING_MODEL]\n- Target customers: Year 1: [N1], Year 2: [N2], Year 3: [N3]\n\nGenerate:\n1. Revenue forecast (monthly, Year 1; quarterly, Year 2-3)\n2. Cost breakdown (fixed vs variable, COGS, opex)\n3. Gross margin analysis\n4. Cash flow statement (monthly Year 1)\n5. P&L statement (3 years)\n6. Break-even analysis\n7. Unit economics (CAC, LTV, payback period)\n8. Sensitivity analysis (best/base/worst case)\n9. Key ratios (burn rate, runway, revenue per employee)\n10. Funding milestones\n\nFormat as tables with clear assumptions documented. Include charts description for visualization.",
+          "tags": ["finance", "projections", "startup"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "biz-006",
+          "title": "Email Sequence Builder",
+          "description": "High-converting email marketing sequences",
+          "prompt": "You are an email marketing expert with $10M+ in email revenue experience. Create a complete email sequence for [PRODUCT/SERVICE] targeting [AUDIENCE]:\n\n1. Welcome Sequence (5 emails)\n   - Email 1: Warm welcome + delivery of lead magnet\n   - Email 2: Brand story + core values (Day 2)\n   - Email 3: Best content/educational value (Day 4)\n   - Email 4: Social proof + testimonials (Day 7)\n   - Email 5: Soft pitch + objection handling (Day 10)\n\n2. Sales Launch Sequence (7 emails)\n   - Teaser, Announcement, Benefits, Social Proof, FAQ, Urgency, Last Call\n\n3. Abandoned Cart (3 emails)\n\n4. Re-engagement (3 emails for cold subscribers)\n\nFor EACH email: subject line (A/B variants), preview text, body copy (150-300 words), CTA button text, send timing. Write in [BRAND_VOICE] tone. Optimize for 40%+ open rate and 5%+ click rate.",
+          "tags": ["email-marketing", "conversion", "copywriting"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "biz-007",
+          "title": "Product Launch Playbook",
+          "description": "Complete go-to-market launch strategy",
+          "prompt": "You are a product launch strategist. Create a complete go-to-market playbook for [PRODUCT] targeting [AUDIENCE]:\n\nPhase 1 - Pre-Launch (4 weeks before):\n- Landing page setup + waitlist strategy\n- Content seeding (blog posts, social teasers)\n- Influencer/partnership outreach plan\n- Beta tester recruitment strategy\n- Email list building tactics\n\nPhase 2 - Launch Week:\n- Day-by-day action plan (Monday to Sunday)\n- Launch day checklist (technical, marketing, support)\n- Social media post schedule with copy\n- Email sequence (4 emails across launch week)\n- Press/PR distribution plan\n- Community engagement strategy\n\nPhase 3 - Post-Launch (4 weeks after):\n- Customer success and onboarding\n- Testimonial/social proof collection\n- Optimization based on first 30 days data\n- Referral program setup\n- Paid advertising strategy\n\nBudget allocation: [BUDGET]\nKPIs: specific metrics for each phase\nRisk mitigation: backup plans for 5 common launch failures",
+          "tags": ["product-launch", "gtm", "marketing"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "biz-008",
+          "title": "Competitor Analysis Framework",
+          "description": "Deep-dive competitor analysis",
+          "prompt": "You are a competitive intelligence analyst. Perform a detailed competitor analysis for [YOUR_BUSINESS] in the [INDUSTRY] space:\n\nAnalyze top 5 competitors:\n1. Company overview (founding, funding, team size)\n2. Product comparison (features, pricing, positioning)\n3. Market positioning (where they sit in the market)\n4. Strengths and weaknesses (honest assessment)\n5. Customer reviews analysis (common praises + complaints)\n6. Marketing strategy (channels, messaging, content)\n7. Technology stack (if visible)\n8. Revenue estimates\n\nCreate a positioning matrix with two key dimensions relevant to [INDUSTRY].\nIdentify gaps in the market that are underserved.\nSuggest 3 differentiation strategies based on the analysis.\n\nFormat: Tables for easy comparison + narrative insights. Be specific, not generic.",
+          "tags": ["competition", "analysis", "strategy"],
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "writing",
+      "name": "✍️ Writing & Content",
+      "icon": "✍️",
+      "prompts": [
+        {
+          "id": "write-001",
+          "title": "SEO Blog Post Writer",
+          "description": "Write ranking blog posts with SEO optimization",
+          "prompt": "You are an SEO content writer. Write a comprehensive blog post about [TOPIC] targeting the keyword [PRIMARY_KEYWORD]:\n\nRequirements:\n1. Title: Include primary keyword, under 60 characters, with power word\n2. Meta description: 155 characters, includes keyword + CTA\n3. Word count: 2000+ words\n4. Structure: H2/H3 hierarchy with keyword-rich headings\n5. Introduction: Hook + problem + promise (under 100 words)\n6. Body: Scannable format with bullet points, numbered lists, bold key phrases\n7. Include: Statistics (with sources), expert quotes, real examples\n8. Internal linking suggestions: 3-5 related topics\n9. CTA: Natural integration every 500 words\n10. Conclusion: Summary + next action step\n\nSEO checklist:\n- Primary keyword in title, first paragraph, H2, conclusion\n- 3-5 LSI keywords naturally woven in\n- Image alt text suggestions\n- Schema markup recommendation\n- FAQ section (3 questions from PAA research)\n\nWrite in [TONE] voice for [AUDIENCE].",
+          "tags": ["seo", "blog", "content-writing"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "write-002",
+          "title": "Social Media Caption Pro",
+          "description": "Platform-optimized social media captions",
+          "prompt": "You are a social media copywriter with 1M+ follower account experience. Create 5 caption variations for [PLATFORM] about [TOPIC/PRODUCT]:\n\nFor each caption:\n1. Hook (first line that stops the scroll)\n2. Body (value-driven, relatable, concise)\n3. CTA (specific, not generic)\n4. Hashtag cluster (platform-optimized)\n5. Best posting time\n\nPlatform rules:\n- Instagram: Visual-first, emoji-friendly, 125-150 words, 20-25 hashtags\n- LinkedIn: Professional insight, 150-300 words, 3-5 hashtags, thought leadership\n- Twitter/X: Punchy, under 280 chars, 1-2 hashtags, provocative\n- TikTok: Gen-Z voice, trending sounds suggestion, hook in 3 seconds\n\nFor EACH variation:\n- Different angle: educational, entertaining, inspirational, controversial, behind-the-scenes\n- Tone: [BRAND_VOICE]\n- A/B test suggestion: what to measure\n\nInclude 3 story-based hooks and 2 data-driven hooks.",
+          "tags": ["social-media", "copywriting", "captions"],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "write-003",
+          "title": "Sales Page Copywriter",
+          "description": "High-converting sales page copy",
+          "prompt": "You are a direct response copywriter who has generated $10M+ in sales. Write a complete sales page for [PRODUCT] targeting [AUDIENCE] with these details:\n- Product: [DESCRIPTION]\n- Price: [PRICE]\n- Main benefit: [BENEFIT]\n- Objection: [TOP OBJECTION]\n\nStructure (PAS + Story + Offer):\n1. Headline: Benefit-driven, specific, under 15 words\n2. Subheadline: Clarifies the promise\n3. Problem section: Agitate the pain (3-4 paragraphs)\n4. Story section: Relatable transformation narrative\n5. Solution: Introduce product as the answer\n6. Benefits: 5-7 bullet points with emotional + logical appeals\n7. Social proof: Testimonial template format\n8. Features breakdown: What's included\n9. Risk reversal: Guarantee statement\n10. Urgency: Reason to buy now\n11. CTA: Specific button text + microcopy\n12. FAQ: Handle top 4 objections\n\nUse [TONE] voice. Write for scanners (bold key phrases, short paragraphs). Target 2000-3000 words total.",
+          "tags": ["copywriting", "sales-page", "conversion"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "write-004",
+          "title": "Newsletter Writer",
+          "description": "Engaging newsletter that people actually read",
+          "prompt": "You are a newsletter writer with 100K+ subscribers. Write a newsletter edition about [TOPIC] for [AUDIENCE]:\n\nStructure:\n1. Subject line: 3 options (curiosity, benefit, newsjacking)\n2. Preview text: Complements subject, under 90 chars\n3. Opening: Personal, conversational, 2-3 sentences max\n4. Hook: Why this matters TODAY\n5. Main content: \n   - One big idea (not 10 small ones)\n   - Concrete examples, not abstract theory\n   - 800-1200 words total\n   - Every paragraph earns the next one\n6. Practical takeaway: 1 action reader can take today\n7. Close: Conversational sign-off + what's coming next\n\nStyle rules:\n- Write like you're texting a smart friend\n- No corporate jargon\n- Short sentences, varied paragraph lengths\n- One emoji per section max\n- Include a \"read this if you're busy\" TL;DR\n\nAlso suggest: subject line A/B test and best send time.",
+          "tags": ["newsletter", "email", "content"],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "write-005",
+          "title": "Landing Page Generator",
+          "description": "Create conversion-optimized landing page copy",
+          "prompt": "You are a conversion rate optimization expert. Write a complete landing page for [PRODUCT/SERVICE] targeting [AUDIENCE]:\n\n1. Hero Section:\n   - Headline (8-12 words, benefit-focused)\n   - Subheadline (clarifies the promise)\n   - CTA button text (action + benefit)\n   - Social proof bar (\"Join 10,000+ ...\" or logos)\n\n2. Problem Section:\n   - 3 pain points with relatable descriptions\n   - \"You've tried X, Y, Z and it doesn't work\"\n\n3. Solution Section:\n   - How [PRODUCT] solves each pain point\n   - Before/After transformation\n\n4. Features → Benefits:\n   - Feature 1 → Benefit (so you can...)\n   - Feature 2 → Benefit\n   - Feature 3 → Benefit\n\n5. Social Proof: 3 testimonial templates\n6. FAQ: 5 objection-handling questions\n7. Pricing: 3-tier structure with recommended option\n8. Final CTA: Urgency + guarantee\n\nKeep total copy under 1500 words. Every word must earn its place. Mobile-first design hints included.",
+          "tags": ["landing-page", "copywriting", "conversion"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "write-006",
+          "title": "LinkedIn Personal Brand Builder",
+          "description": "Build authority on LinkedIn with strategic content",
+          "prompt": "You are a LinkedIn ghostwriter who has grown 50+ personal brands to 10K+ followers. Create a LinkedIn personal branding strategy for [PERSON] in [INDUSTRY]:\n\n1. Profile Optimization:\n   - Headline formula (not job title)\n   - About section narrative (story-driven, not resume)\n   - Featured section strategy\n   - Skills & endorsements to highlight\n\n2. Content Pillars (3-4 max):\n   - Define each pillar with topics and angles\n   - Suggested posting frequency per pillar\n\n3. 2-Week Content Calendar (10 posts):\n   - For each: format, hook, key message, CTA\n   - Mix: 40% educational, 30% storytelling, 20% opinion, 10% engagement bait\n\n4. Engagement Strategy:\n   - 5 daily actions for growth\n   - Comment templates for high-visibility posts\n   - DM networking scripts\n\n5. Growth Tactics:\n   - How to leverage LinkedIn algorithm (2026 updates)\n   - Carousel vs. text post strategy\n   - Collaborative post approach\n\nWrite in [TONE] voice. All hooks must pass the \"thumb-stop\" test.",
+          "tags": ["linkedin", "personal-branding", "social-media"],
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "🤖 AI & Automation",
+      "icon": "🤖",
+      "prompts": [
+        {
+          "id": "ai-001",
+          "title": "AI Workflow Automator",
+          "description": "Design AI-powered automation workflows",
+          "prompt": "You are an AI automation architect. Design a complete AI-powered workflow for [BUSINESS_PROCESS]:\n\n1. Current Process Mapping:\n   - Step-by-step breakdown of the manual process\n   - Time per step (estimate)\n   - Error rate per step\n   - Cost per execution\n\n2. AI Enhancement Plan:\n   - Which steps can AI handle? (full automation vs. augmentation)\n   - Which AI model/service for each step? (GPT-4, Claude, custom, etc.)\n   - Input/output for each AI step\n   - Fallback mechanism when AI fails\n\n3. Integration Architecture:\n   - Tool stack (Zapier/Make/n8n + APIs)\n   - Data flow diagram (text description)\n   - Error handling and logging\n   - Rate limiting and cost controls\n\n4. Implementation Roadmap:\n   - Phase 1: Quick wins (1-2 weeks)\n   - Phase 2: Core automation (1 month)\n   - Phase 3: Advanced features (2-3 months)\n\n5. ROI Projection:\n   - Time saved per week\n   - Cost savings vs. AI expenses\n   - Error reduction percentage\n   - Break-even timeline\n\nProvide specific tool recommendations and estimated costs.",
+          "tags": ["ai", "automation", "workflow", "no-code"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "ai-002",
+          "title": "Prompt Chain Builder",
+          "description": "Create multi-step AI prompt chains",
+          "prompt": "You are a prompt engineering expert. Design a multi-step prompt chain for [TASK] that produces high-quality, consistent results:\n\nFor each step in the chain:\n1. Step name and purpose\n2. Input format (what this step receives)\n3. System prompt (role + constraints)\n4. User prompt template (with variables)\n5. Expected output format (JSON/schema)\n6. Quality check criteria\n7. Failure recovery (what to do if output is bad)\n8. Temperature and model recommendation\n\nAlso include:\n- Chain orchestration logic (sequential vs. parallel steps)\n- State management between steps\n- Cost estimation per run\n- Optimization tips (caching, few-shot examples, chain-of-thought)\n- Edge case handling\n- Human-in-the-loop checkpoints (if needed)\n\nExample chains: Research → Outline → Draft → Edit → Format\n                    Idea → Evaluate → Expand → Polish\n                    Data → Analyze → Visualize → Narrate\n\nMake each prompt specific enough to be copy-paste ready.",
+          "tags": ["prompt-engineering", "ai", "chain-of-thought"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "ai-003",
+          "title": "Chatbot Persona Designer",
+          "description": "Create AI chatbot personalities and system prompts",
+          "prompt": "You are an AI chatbot designer. Create a complete chatbot persona for [USE_CASE] serving [TARGET_AUDIENCE]:\n\n1. Persona Definition:\n   - Name and backstory\n   - Personality traits (5 key traits with examples)\n   - Tone of voice (formal/casual/playful/professional)\n   - Do's and Don'ts (10 each)\n   - Catchphrases or verbal tics\n\n2. System Prompt:\n   - Role definition\n   - Knowledge boundaries (what it knows/doesn't know)\n   - Conversation flow (greeting → discovery → solution → close)\n   - Handling off-topic queries\n   - Escalation protocol\n\n3. Knowledge Base Structure:\n   - FAQ pairs (20 common Q&A)\n   - Decision tree for common scenarios\n   - Product/service information hierarchy\n\n4. Guardrails:\n   - Refusal templates for harmful requests\n   - Staying on-brand under pressure\n   - Handling complaints gracefully\n   - Privacy and data protection rules\n\n5. Testing Scenarios:\n   - 10 test conversations covering edge cases\n   - Expected vs. actual response evaluation criteria\n\nMake it production-ready, not generic.",
+          "tags": ["chatbot", "ai-persona", "system-prompt"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "ai-004",
+          "title": "Data Analysis Prompt Pack",
+          "description": "Analyze any dataset with structured AI prompts",
+          "prompt": "You are a data scientist. Analyze the following dataset and provide comprehensive insights:\n\n[DATASET DESCRIPTION OR PASTE DATA HERE]\n\nPerform the following analysis:\n\n1. Data Overview:\n   - Shape, columns, data types\n   - Missing values and outliers\n   - Basic statistics (mean, median, std, range)\n\n2. Exploratory Analysis:\n   - Distribution of key variables\n   - Correlation matrix (top correlations)\n   - Segment breakdown (by category/cluster)\n   - Time trends (if applicable)\n\n3. Key Insights:\n   - Top 5 most important findings\n   - Unexpected patterns or anomalies\n   - Business implications of each finding\n\n4. Predictions:\n   - Trend forecast (next period)\n   - Risk factors\n   - Opportunity areas\n\n5. Recommendations:\n   - 3-5 actionable next steps\n   - Priority ranking with effort vs. impact\n   - Suggested visualizations for each recommendation\n\n6. Data Quality Report:\n   - Completeness score\n   - Consistency checks\n   - Recommended data collection improvements\n\nFormat as structured sections with tables where appropriate. Include Python/pandas code snippets for each analysis step.",
+          "tags": ["data-analysis", "ai", "insights"],
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "productivity",
+      "name": "⚡ Productivity & Life",
+      "icon": "⚡",
+      "prompts": [
+        {
+          "id": "prod-001",
+          "title": "Weekly Planner Architect",
+          "description": "Design an optimal week structure",
+          "prompt": "You are a productivity architect. Design an optimal weekly schedule for a [ROLE/PERSON] with these constraints:\n- Work hours: [HOURS] per day, [DAYS] per week\n- Priority projects: [LIST PROJECTS]\n- Energy pattern: [MORNING PERSON/NIGHT OWL]\n- Non-negotiable commitments: [FAMILY/EXERCISE/ETC]\n\nCreate:\n1. Time-blocked daily schedule (hour by hour)\n2. Theme days (e.g., Maker Monday, Meeting Tuesday)\n3. Deep work blocks (2-4 hour uninterrupted sessions)\n4. Buffer zones (15-30 min between tasks)\n5. Energy management strategy (high-energy tasks when peak, low-energy when dipping)\n6. Weekly review template (5 questions to evaluate and adjust)\n7. Emergency protocol (when schedule breaks down)\n\nAlso include:\n- Morning routine (first 90 minutes)\n- Shutdown ritual (last 30 minutes)\n- Saturday planning session template\n- Monthly review checklist\n\nBe specific to the role. No generic advice. Include exact time slots.",
+          "tags": ["productivity", "planning", "time-management"],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "prod-002",
+          "title": "Learning Accelerator",
+          "description": "Master any skill 10x faster",
+          "prompt": "You are a learning optimization expert. Create a rapid learning plan for [SKILL/TOPIC] with the goal of reaching [PROFICIENCY_LEVEL] in [TIMEFRAME]:\n\n1. Skill Decomposition:\n   - Break into 5-7 sub-skills\n   - Prioritize by impact (80/20: which 20% gives 80% of results)\n   - Identify minimum viable competence for each\n\n2. Learning Path:\n   - Week 1: Foundation (what to learn, specific resources)\n   - Week 2-3: Practice (exercises, projects, spaced repetition)\n   - Week 4+: Refinement (advanced concepts, real-world application)\n\n3. Resources:\n   - Top 3 free resources per sub-skill\n   - Top 2 paid courses/books (if worth it)\n   - Community/forum recommendations\n   - Practice project ideas (3 progressive difficulty)\n\n4. Retention Strategy:\n   - Feynman technique application\n   - Spaced repetition schedule (specific intervals)\n   - Active recall exercises\n   - Teaching opportunities (write/blog/mentor)\n\n5. Progress Tracking:\n   - Milestone checklist\n   - Self-assessment rubric\n   - Portfolio deliverables\n\n6. Common Pitfalls:\n   - Top 5 mistakes beginners make\n   - How to avoid each one\n\nBe hyper-specific. Include actual URLs, book titles, and exercise descriptions.",
+          "tags": ["learning", "skill-development", "self-improvement"],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "prod-003",
+          "title": "Decision Framework Builder",
+          "description": "Make better decisions with structured frameworks",
+          "prompt": "You are a decision science expert. Help me make a high-stakes decision about [DECISION]:\n\nContext: [SITUATION]\nOptions I'm considering: [LIST OPTIONS]\nMy priorities: [LIST PRIORITIES]\n\nApply these frameworks:\n\n1. Decision Matrix:\n   - Weight each priority (1-10)\n   - Score each option per priority (1-10)\n   - Calculate weighted scores\n   - Present as a table\n\n2. Regret Minimization (Jeff Bezos framework):\n   - At age 80, will I regret NOT doing this?\n   - What's the worst that could happen? (be specific)\n   - What's the best that could happen?\n   - Is the downside reversible? Is the upside one-way?\n\n3. Second-Order Effects:\n   - For each option, what happens next? (and then what?)\n   - 3 levels deep of consequences\n   - Black swan scenarios\n\n4. Opportunity Cost:\n   - What am I giving up by choosing this?\n   - What's the cost of delaying the decision?\n\n5. Reversibility Check:\n   - Is this a one-way door or two-way door?\n   - If two-way, what's the fastest way to test?\n\n6. Final Recommendation:\n   - Clear verdict with confidence level\n   - First 3 actions to take\n   - Review date to evaluate",
+          "tags": ["decision-making", "framework", "productivity"],
+          "difficulty": "beginner"
+        },
+        {
+          "id": "prod-004",
+          "title": "Remote Work System",
+          "description": "Build a productivity system for remote work",
+          "prompt": "You are a remote work productivity consultant. Design a complete remote work system for [ROLE] working [HOURS] hours/day:\n\n1. Workspace Setup:\n   - Physical ergonomics checklist\n   - Software stack (communication, project management, focus tools)\n   - Browser setup (tabs, extensions, bookmarks)\n   - Notification management system\n\n2. Daily Structure:\n   - Morning startup routine (15 min)\n   - Time-blocking template (deep work + admin + meetings)\n   - Break protocol (Pomodoro vs. ultradian rhythm)\n   - End-of-day shutdown (15 min)\n\n3. Communication Protocol:\n   - Response time expectations by channel\n   - Meeting rules (max duration, required vs. optional, async alternatives)\n   - Status updates template (daily/weekly)\n   - Async communication best practices\n\n4. Focus System:\n   - Deep work blocks (minimum 2 hours, protected)\n   - Distraction elimination checklist\n   - Context switching cost awareness\n   - Energy management throughout the day\n\n5. Health & Boundaries:\n   - Movement breaks schedule\n   - Screen time management\n   - Work-life boundary rituals\n   - Social connection plan\n\n6. Weekly Review:\n   - Achievement tracker\n   - Energy audit\n   - Priority adjustment\n   - Next week planning template\n\nMake it actionable, not philosophical. Every item must be something I can implement today.",
+          "tags": ["remote-work", "productivity", "system"],
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "crypto",
+      "name": "🔗 Crypto & Web3",
+      "icon": "🔗",
+      "prompts": [
+        {
+          "id": "crypto-001",
+          "title": "DeFi Yield Analyzer",
+          "description": "Analyze DeFi protocols for yield opportunities",
+          "prompt": "You are a DeFi analyst. Analyze the following yield farming opportunity and provide a comprehensive risk/reward assessment:\n\nProtocol: [PROTOCOL_NAME]\nPool: [POOL_PAIR]\nCurrent APY: [APY]%\nTVL: $[TVL]\nChain: [BLOCKCHAIN]\n\nProvide:\n1. Yield Breakdown:\n   - Base APY (trading fees)\n   - Reward APY (token emissions)\n   - Real APY (after impermanent loss estimate)\n   - Net APY (after gas costs on [CHAIN])\n\n2. Risk Assessment (1-10 each):\n   - Smart contract risk\n   - Impermanent loss risk\n   - Liquidity risk (can I exit?)\n   - Token price risk\n   - Protocol governance risk\n   - Overall risk score\n\n3. Impermanent Loss Calculator:\n   - IL at 2x price change\n   - IL at 5x price change\n   - Break-even analysis (when does yield offset IL?)\n\n4. Strategy Comparison:\n   - HODL vs. LP vs. Lending vs. Staking\n   - 30/60/90 day projected returns\n\n5. Red Flags Checklist:\n   - Audit status\n   - TVL trend (growing/shrinking)\n   - Token unlock schedule\n   - Team transparency\n\n6. Action Recommendation: Clear buy/pass/wait with specific entry criteria",
+          "tags": ["defi", "yield", "crypto", "analysis"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "crypto-002",
+          "title": "Smart Contract Auditor",
+          "description": "Audit smart contracts for vulnerabilities",
+          "prompt": "You are a smart contract security auditor. Perform a thorough security review of the following Solidity contract:\n\n```solidity\n[PASTE CONTRACT CODE HERE]\n```\n\nCheck for:\n1. Reentrancy vulnerabilities (external calls, state changes order)\n2. Integer overflow/underflow\n3. Access control issues (missing modifiers, owner functions)\n4. Unchecked return values\n5. Front-running vulnerability (DEX-specific)\n6. Flash loan attack vectors\n7. Oracle manipulation risk\n8. Unbounded loops (gas griefing)\n9. Storage collision in proxy patterns\n10. Centralization risk (admin privileges)\n\nFor each finding:\n- Severity: Critical/High/Medium/Low/Info\n- Description: What's wrong\n- Impact: What could happen\n- Recommendation: How to fix (with code)\n\nAlso provide:\n- Gas optimization suggestions\n- Code quality review\n- Architectural recommendations\n- Test coverage suggestions\n- Formal verification recommendations",
+          "tags": ["smart-contract", "solidity", "audit", "security"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "crypto-003",
+          "title": "Token Economics Designer",
+          "description": "Design sustainable tokenomics for Web3 projects",
+          "prompt": "You are a tokenomics expert. Design a sustainable token economy for [PROJECT_TYPE]:\n\nProject: [DESCRIPTION]\nUse Case: [PRIMARY_USE_CASE]\nTarget Users: [AUDIENCE]\n\nDesign:\n1. Token Utility (must have real demand, not just speculation):\n   - 5+ use cases for the token\n   - Burn mechanism (if applicable)\n   - Staking rewards structure\n   - Governance rights\n\n2. Supply Mechanics:\n   - Total supply and reasoning\n   - Initial distribution (team, investors, community, treasury)\n   - Vesting schedule (cliff + linear unlock)\n   - Inflation rate Year 1-5\n\n3. Token Flow:\n   - How tokens enter circulation\n   - How tokens leave circulation\n   - Velocity reducers (what slows selling pressure)\n   - Value accrual mechanism\n\n4. Economic Model:\n   - Revenue sources for the protocol\n   - Profit sharing mechanism\n   - Treasury management policy\n   - Sustainability without token price appreciation\n\n5. Risk Analysis:\n   - Death spiral scenarios\n   - Whale accumulation risk\n   - Regulatory concerns\n   - Market condition resilience\n\n6. Comparable Analysis:\n   - 3 similar projects and what they did right/wrong\n   - Key differentiators\n\nInclude charts/tables description for visual representation.",
+          "tags": ["tokenomics", "web3", "crypto", "design"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "crypto-004",
+          "title": "Crypto Portfolio Optimizer",
+          "description": "Build and optimize a crypto portfolio strategy",
+          "prompt": "You are a crypto portfolio strategist. Design an optimized portfolio allocation for an investor with these parameters:\n\nInvestment amount: $[AMOUNT]\nRisk tolerance: [CONSERVATIVE/MODERATE/AGGRESSIVE]\nTime horizon: [MONTHS/YEARS]\nExperience level: [BEGINNER/INTERMEDIATE/ADVANCED]\n\n1. Portfolio Allocation:\n   - Core holdings (BTC, ETH) with % allocation\n   - Mid-cap projects (top 20) with % allocation\n   - Small-cap/DeFi plays with % allocation\n   - Stablecoin reserve %\n   - Specific reasoning for each pick\n\n2. Risk Management:\n   - Position sizing rules (max % per coin)\n   - Stop-loss levels by category\n   - Rebalancing strategy (time-based vs. threshold)\n   - Correlation analysis between picks\n\n3. Entry Strategy:\n   - DCA schedule (weekly/bi-weekly/monthly)\n   - Lump sum vs. DCA comparison\n   - Key support levels for scaling in\n\n4. Exit Strategy:\n   - Take-profit levels (1R, 2R, 3R)\n   - Tax-loss harvesting strategy\n   - Portfolio rebalancing triggers\n\n5. Tracking Dashboard:\n   - Key metrics to monitor\n   - Red flags to watch\n   - Weekly review template\n\n6. Scenario Analysis:\n   - Bull case: +200%\n   - Base case: +50%\n   - Bear case: -60%\n   - Black swan: -90%\n\nInclude specific coin recommendations with thesis for each.",
+          "tags": ["crypto", "portfolio", "investment", "strategy"],
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "bonus": {
+    "framework_prompts": [
+      {
+        "id": "frame-001",
+        "title": "STAR Method Storyteller",
+        "prompt": "Transform any experience into a compelling STAR format story:\n\nSituation: Set the scene with specific context\nTask: What was your responsibility or challenge?\nAction: What specific steps did YOU take? (use \"I\" not \"we\")\nResult: Quantifiable outcome with metrics\n\nExperience to transform: [PASTE EXPERIENCE HERE]\n\nMake it interview-ready: concise, impactful, and memorable. Include 2-3 quantifiable metrics."
+      },
+      {
+        "id": "frame-002",
+        "title": "5 Whys Problem Solver",
+        "prompt": "Apply the 5 Whys root cause analysis to this problem:\n\nProblem: [DESCRIBE PROBLEM]\n\nWhy 1: Why did this happen?\n→ Answer + evidence\nWhy 2: Why did that happen?\n→ Answer + evidence\nWhy 3: Why did that happen?\n→ Answer + evidence\nWhy 4: Why did that happen?\n→ Answer + evidence\nWhy 5: Why did that happen?\n→ Root cause identified\n\nRoot Cause: [statement]\nPrevention: [3 specific actions to prevent recurrence]\nQuick Fix: [immediate mitigation]\nLong-term Fix: [systemic solution]"
+      },
+      {
+        "id": "frame-003",
+        "title": "SWOT Deep Dive",
+        "prompt": "Conduct a thorough SWOT analysis for [SUBJECT]:\n\nStrengths (Internal, Positive):\n- List 5-7 with evidence\n- Which is the #1 competitive advantage?\n\nWeaknesses (Internal, Negative):\n- List 5-7 with honesty\n- Which is the #1 threat to survival?\n\nOpportunities (External, Positive):\n- List 5-7 with market data\n- Which has the highest ROI potential?\n\nThreats (External, Negative):\n- List 5-7 with probability assessment\n- Which requires immediate action?\n\nStrategic Implications:\n- SO: How to use strengths to capture opportunities\n- WO: How to address weaknesses to seize opportunities\n- ST: How to use strengths to counter threats\n- WT: How to minimize weaknesses and avoid threats\n\nTop 3 Priority Actions (ranked by impact and feasibility):"
+      },
+      {
+        "id": "frame-004",
+        "title": "Eisenhower Matrix Prioritizer",
+        "prompt": "Organize these tasks using the Eisenhower Matrix:\n\nTasks: [LIST YOUR TASKS]\n\nFor each task, assign:\n- Urgency: High/Low\n- Importance: High/Low\n\nQuadrant 1 (Urgent + Important): DO FIRST\n- [tasks] → Specific action + deadline\n\nQuadrant 2 (Not Urgent + Important): SCHEDULE\n- [tasks] → Specific time block this week\n\nQuadrant 3 (Urgent + Not Important): DELEGATE\n- [tasks] → Who to delegate to + what to hand off\n\nQuadrant 4 (Not Urgent + Not Important): ELIMINATE\n- [tasks] → Why it can be removed\n\nDaily Top 3 (from Q1 + Q2):\n1. [Most impactful task] - 2hr deep work block\n2. [Second priority] - 1hr focused session\n3. [Third priority] - 30min sprint\n\nWeekly review question: Which Q2 task, if done consistently, would make the biggest difference in 3 months?"
+      },
+      {
+        "id": "frame-005",
+        "title": "First Principles Thinker",
+        "prompt": "Break down [PROBLEM/CHALLENGE] using first principles thinking:\n\nStep 1 - Identify the problem:\nWhat exactly am I trying to solve?\n\nStep 2 - List assumptions:\nWrite every assumption about this problem:\n1. [assumption]\n2. [assumption]\n...\n\nStep 3 - Challenge each assumption:\nFor each: \"What if this wasn't true?\"\n- Assumption 1: What if not? → [possibility]\n- Assumption 2: What if not? → [possibility]\n...\n\nStep 4 - Rebuild from fundamentals:\nWhat are the fundamental truths I CANNOT remove?\n- [truth 1]\n- [truth 2]\n...\n\nStep 5 - Novel solutions:\nBased on these fundamentals only, what solutions emerge?\n- [solution 1]\n- [solution 2]\n...\n\nStep 6 - Implementation:\nPick the most promising novel solution and create a 3-step action plan."
+      }
+    ],
+    "meta_prompts": [
+      {
+        "id": "meta-001",
+        "title": "Prompt Improver",
+        "description": "Make any prompt 10x better",
+        "prompt": "You are a prompt engineering expert. Take the following prompt and improve it to be 10x more effective:\n\nORIGINAL PROMPT:\n\"\"\"\n[PASTE YOUR PROMPT HERE]\n\"\"\"\n\nAnalyze and improve:\n1. Specificity: Is it vague or precise? Add specific constraints.\n2. Context: Does it provide enough background? Add role and scenario.\n3. Output format: Is the expected output clear? Define exact format.\n4. Examples: Does it include examples? Add 1-2 shot examples.\n5. Constraints: Are boundaries defined? Add what NOT to do.\n6. Quality check: Does it define what \"good\" looks like? Add criteria.\n\nProvide:\n- Rating of original prompt (1-10)\n- Top 3 issues\n- Rewritten prompt (production-ready)\n- Explanation of each change\n\nThe improved prompt should produce consistently excellent results regardless of who uses it."
+      },
+      {
+        "id": "meta-002",
+        "title": "System Prompt Generator",
+        "description": "Create reusable system prompts for any use case",
+        "prompt": "You are a system prompt architect. Create a production-ready system prompt for [USE_CASE]:\n\nRequirements:\n- Target AI: [GPT-4/Claude/etc.]\n- Use case: [DESCRIBE WHAT THE AI SHOULD DO]\n- Tone: [professional/casual/technical/creative]\n- Audience: [WHO WILL INTERACT WITH THE AI]\n- Constraints: [ANY LIMITATIONS OR RULES]\n\nGenerate:\n1. System Prompt (complete, copy-paste ready):\n   - Role definition (who the AI is)\n   - Core capabilities (what it can do)\n   - Behavioral guidelines (how it should act)\n   - Output format specifications\n   - Handling edge cases\n   - What it should NOT do\n\n2. Example conversations (3 turns each):\n   - Happy path example\n   - Edge case example\n   - Off-topic/abuse example\n\n3. Temperature & parameter recommendations\n4. Testing checklist (5 test cases to validate)\n\nThe system prompt should be 500-2000 words, specific enough to constrain output, flexible enough to handle varied inputs."
+      }
+    ]
+  }
+}
